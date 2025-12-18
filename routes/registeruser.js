@@ -6,6 +6,7 @@ const registerValidation = require("../middleware/registerValidation");
 const tempUsers = require("../utils/tempUsers");
 
 router.post("/", registerValidation, async (req, res) => {
+  console.log("NEW REGISTER VALIDATION HIT"); // 👈 ADD THIS
   try {
     const { username, email, mobile, password } = req.body;
 
